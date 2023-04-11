@@ -67,6 +67,7 @@ class Az {
             console.log(`Có ${data.length} workItem trong timelog`);
             for (let i = 0; i < data.length; i++) {
                 const wiInfo = data[i];
+                console.log(`Get thông tin workitem ${wiInfo.title}`);
                 const wi = yield this.getWorkItemInfo(wiInfo.workItemId);
                 if (wi) {
                     wIds.push({
@@ -131,6 +132,7 @@ class Az {
                 const pullRequestWorkItemRefs = yield gitApi.getPullRequestWorkItemRefs("VSA.Application", (_c = pr.pullRequestId) !== null && _c !== void 0 ? _c : 0, "VSA");
                 const pullRequestWorkItemIds = pullRequestWorkItemRefs.map(x => x.id);
                 const workItems = yield this.getWorkItemsInfo(pullRequestWorkItemIds);
+                console.log(`Get thông tin pulll request ${pr.title}`);
                 pullRequestWorkItems.push({
                     title: (_d = pr.title) !== null && _d !== void 0 ? _d : "",
                     pullRequestId: (_e = pr.pullRequestId) !== null && _e !== void 0 ? _e : 0,
@@ -151,13 +153,19 @@ class Az {
                     pr: !!pr ? pr.pullRequestUrl : "N/A"
                 });
             }
-            this.writeData('finalData.json', taskSummaries);
+            this.writeData('finalData.json', JSON.stringify(this.sort(JSON.stringify(taskSummaries)), null, 2));
         });
-        this.sort = () => {
-            const dataPath = `../${this.DATA_PATH}/finalData.json`;
-            let json = require(dataPath);
-            json = lodash_1.default.sortBy(json, 'date');
-            debugger;
+        this.sort = (taskSummaries) => {
+            let json = JSON.parse(taskSummaries);
+            json = lodash_1.default.map(json, x => {
+                return Object.assign({ date: x.date, fullDate: new Date(x.date) }, x);
+            });
+            json = lodash_1.default.sortBy(json, 'fullDate');
+            json = lodash_1.default.map(json, x => {
+                delete x.fullDate;
+                return Object.assign({}, x);
+            });
+            return json;
         };
         if (!(0, fs_1.existsSync)(this.DATA_PATH)) {
             (0, fs_1.mkdirSync)(this.DATA_PATH);
@@ -171,4 +179,4 @@ class Az {
     }
 }
 const az = new Az();
-az.sort();
+az.getWorkItemTracking();

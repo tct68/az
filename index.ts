@@ -39,6 +39,7 @@ class Az {
         console.log(`Có ${data.length} workItem trong timelog`)
         for (let i = 0; i < data.length; i++) {
             const wiInfo: any = data[i];
+            console.log(`Get thông tin workitem ${wiInfo.title}`)
             const wi = await this.getWorkItemInfo(wiInfo.workItemId)
             if (wi) {
                 wIds.push({
@@ -117,6 +118,7 @@ class Az {
             const pullRequestWorkItemRefs = await gitApi.getPullRequestWorkItemRefs("VSA.Application", pr.pullRequestId ?? 0, "VSA");
             const pullRequestWorkItemIds = pullRequestWorkItemRefs.map(x => x.id);
             const workItems = await this.getWorkItemsInfo(pullRequestWorkItemIds);
+            console.log(`Get thông tin pulll request ${pr.title}`);
 
             pullRequestWorkItems.push({
                 title: pr.title ?? "",
@@ -141,20 +143,29 @@ class Az {
             });
         }
 
-        this.writeData('finalData.json', taskSummaries);
+        this.writeData('finalData.json', JSON.stringify(this.sort(JSON.stringify(taskSummaries)), null, 2));
     }
 
-    sort = () => {
-        const dataPath = `../${this.DATA_PATH}/finalData.json`
-        let json = require(dataPath)
+    sort = (taskSummaries: string) => {
+        let json = JSON.parse(taskSummaries)
         json = _.map(json, x => {
             return {
-                date: x.date
+                date: x.date,
+                fullDate: new Date(x.date),
+                ...x
             }
         })
-        debugger
+        json = _.sortBy(json, 'fullDate')
+        json = _.map(json, x => {
+            delete x.fullDate
+            return {
+                ...x
+            }
+        })
+
+        return json
     }
 }
 
 const az = new Az();
-az.sort()
+az.getWorkItemTracking()
