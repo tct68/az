@@ -1,0 +1,578 @@
+[
+  {
+    "date": "2/13/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "F_02 - Analyze Requirement",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/7/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/30/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle The format of values should be based on the users' locale settings.",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/390301"
+  },
+  {
+    "date": "1/13/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle show/hide widget FC, AFB, and FS ",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
+  },
+  {
+    "date": "1/3/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2603628: [GA] Unable to save when creating Cross reference, loading button keeps spinning",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/380580"
+  },
+  {
+    "date": "1/16/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle show/hide widget FC, AFB, and FS ",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
+  },
+  {
+    "date": "2/22/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "BE/FE - Implement load data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
+  },
+  {
+    "date": "3/20/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "1/12/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
+  },
+  {
+    "date": "1/5/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2606689: [Visualization_RA_GCT] The tooltip and shortcut key of the tickmark GCT works incorrectly under TQ section",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/21/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2842642: [5A Sample selection][Non-representative selection summary] The guidance should not display when no data is populated",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411279"
+  },
+  {
+    "date": "2/24/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "BE/FE - Implement Save data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
+  },
+  {
+    "date": "2/2/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/21/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "BE/FE - Implement load data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
+  },
+  {
+    "date": "1/4/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix [GA][RA-Assertion] User is not able to input more data into the Additional documentation when pasting more than 2000 characters then hiding this field and showing it back",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/381041"
+  },
+  {
+    "date": "3/30/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/14/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "2/15/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI widget 68553886",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/10/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle get list accountId when checkbox checked",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/395309"
+  },
+  {
+    "date": "1/11/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
+  },
+  {
+    "date": "3/11/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "3/2/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
+  },
+  {
+    "date": "2/16/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI widget 68553886",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/9/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2600885: [SE][Disclosures] The system does not navigate to the Assertion when the user clicks on the source content is the name of the Assertion where the common tools are attached",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/1/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
+  },
+  {
+    "date": "3/17/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "1/3/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2600221: [Section_Visualization widget][RA WP] Not reset data in visualization group name and image name after set invalid data( wrong format, more than maxlength, emty data) then discard save FSL/Disclosure wp",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/380057"
+  },
+  {
+    "date": "2/8/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle Save Summary Value",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
+  },
+  {
+    "date": "2/1/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/10/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
+  },
+  {
+    "date": "3/12/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "2/16/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI widget 68553888",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
+  },
+  {
+    "date": "3/9/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/3/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/13/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "2/7/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle Save Summary Value",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
+  },
+  {
+    "date": "3/6/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/4/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/3/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/23/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "BE/FE - Implement Save data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
+  },
+  {
+    "date": "1/6/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2600885: [SE][Disclosures] The system does not navigate to the Assertion when the user clicks on the source content is the name of the Assertion where the common tools are attached",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/17/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI widget 68553887",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
+  },
+  {
+    "date": "2/27/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
+  },
+  {
+    "date": "3/16/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Check AC and Fix bugs",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
+  },
+  {
+    "date": "3/27/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/12/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Document analysis",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/13/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Document analysis",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/24/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2844773: The calculation is wrong in the parameter log.",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/418088"
+  },
+  {
+    "date": "2/6/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle Save Summary Value",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
+  },
+  {
+    "date": "3/8/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "3/5/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/17/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle show/hide widget FC, AFB, and FS ",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
+  },
+  {
+    "date": "2/20/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI Widget 66439955",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
+  },
+  {
+    "date": "2/14/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "F_02 - Analyze Requirement",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/28/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
+  },
+  {
+    "date": "3/31/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "2/14/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "FE - Implement UI widget 68553886",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/5/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2609468: [GA] Lack of back button on common tool right side when view the common tool filtered list view",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/381521"
+  },
+  {
+    "date": "2/9/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle Save Summary Value",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
+  },
+  {
+    "date": "3/10/2023",
+    "channelName": "",
+    "podlead": "Hung Bui (SM)",
+    "quarter": "Q1",
+    "ticket": "Implement Track changes for Population subject to sampling widgets",
+    "workItemType": "Dev - Development",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/31/2023",
+    "channelName": "",
+    "podlead": "Quan Dinh (SM)",
+    "quarter": "Q1",
+    "ticket": "Handle The format of values should be based on the users' locale settings.",
+    "workItemType": "Dev - Development",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/390301"
+  },
+  {
+    "date": "3/22/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2848534: Missing a warning guidance when changing dataset.",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  },
+  {
+    "date": "1/9/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
+    "workItemType": "Dev - Bug fix",
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
+  },
+  {
+    "date": "3/23/2023",
+    "channelName": "",
+    "podlead": "Thuong Truong Cong (SM)",
+    "quarter": "Q1",
+    "ticket": "Fix Bug 2854253: User doesn't get notified of changes when changing a dataset without relevant amount column",
+    "workItemType": "Dev - Bug fix",
+    "pr": "N/A"
+  }
+]
