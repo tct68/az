@@ -1,578 +1,582 @@
 [
   {
-    "date": "2/13/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "F_02 - Analyze Requirement",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/7/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "1/30/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle The format of values should be based on the users' locale settings.",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/390301"
-  },
-  {
-    "date": "1/13/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle show/hide widget FC, AFB, and FS ",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
-  },
-  {
-    "date": "1/3/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2603628: [GA] Unable to save when creating Cross reference, loading button keeps spinning",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/380580"
-  },
-  {
-    "date": "1/16/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle show/hide widget FC, AFB, and FS ",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
-  },
-  {
-    "date": "2/22/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "BE/FE - Implement load data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
-  },
-  {
-    "date": "3/20/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "1/12/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
-  },
-  {
-    "date": "1/5/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2606689: [Visualization_RA_GCT] The tooltip and shortcut key of the tickmark GCT works incorrectly under TQ section",
-    "workItemType": "Dev - Bug fix",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/21/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2842642: [5A Sample selection][Non-representative selection summary] The guidance should not display when no data is populated",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411279"
-  },
-  {
-    "date": "2/24/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "BE/FE - Implement Save data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
-  },
-  {
-    "date": "2/2/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "2/21/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "BE/FE - Implement load data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
-  },
-  {
-    "date": "1/4/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix [GA][RA-Assertion] User is not able to input more data into the Additional documentation when pasting more than 2000 characters then hiding this field and showing it back",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/381041"
-  },
-  {
-    "date": "3/30/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
-    "workItemType": "Dev - Bug fix",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/14/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "2/15/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI widget 68553886",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "2/10/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle get list accountId when checkbox checked",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/395309"
-  },
-  {
-    "date": "1/11/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
-  },
-  {
-    "date": "3/11/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "3/2/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
-  },
-  {
-    "date": "2/16/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI widget 68553886",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "1/9/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2600885: [SE][Disclosures] The system does not navigate to the Assertion when the user clicks on the source content is the name of the Assertion where the common tools are attached",
-    "workItemType": "Dev - Bug fix",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/1/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
-  },
-  {
-    "date": "3/17/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "1/3/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2600221: [Section_Visualization widget][RA WP] Not reset data in visualization group name and image name after set invalid data( wrong format, more than maxlength, emty data) then discard save FSL/Disclosure wp",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/380057"
-  },
-  {
-    "date": "2/8/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle Save Summary Value",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
-  },
-  {
-    "date": "2/1/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "1/10/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
-  },
-  {
-    "date": "3/12/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "2/16/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI widget 68553888",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
-  },
-  {
-    "date": "3/9/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "2/3/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "[Group] Handle Combination of components and account IDs of mapped account(s) to the procedure when checkbox checked",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/13/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "2/7/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle Save Summary Value",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
-  },
-  {
-    "date": "3/6/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/4/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/3/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "2/23/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "BE/FE - Implement Save data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/401138"
-  },
-  {
-    "date": "1/6/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2600885: [SE][Disclosures] The system does not navigate to the Assertion when the user clicks on the source content is the name of the Assertion where the common tools are attached",
-    "workItemType": "Dev - Bug fix",
-    "pr": "N/A"
-  },
-  {
-    "date": "2/17/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI widget 68553887",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
-  },
-  {
-    "date": "2/27/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
-  },
-  {
-    "date": "3/16/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Check AC and Fix bugs",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/411419"
-  },
-  {
-    "date": "3/27/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
-    "workItemType": "Dev - Bug fix",
-    "pr": "N/A"
-  },
-  {
-    "date": "1/12/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Document analysis",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "1/13/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Document analysis",
-    "workItemType": "Dev - Development",
-    "pr": "N/A"
-  },
-  {
-    "date": "3/24/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
+    "date": "4/3/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
     "ticket": "Fix Bug 2844773: The calculation is wrong in the parameter log.",
-    "workItemType": "Dev - Bug fix",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2861795,
     "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/418088"
   },
   {
-    "date": "2/6/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle Save Summary Value",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
-  },
-  {
-    "date": "3/8/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
+    "date": "4/4/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2882382: [TOD] The dataset Not In Use is still displayed on SST widget after re dummy and re-select dataset",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2885252,
     "pr": "N/A"
   },
   {
-    "date": "3/5/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
+    "date": "4/5/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2889078: The name of selected RAC in \"Relevant amount column\" is auto revert to previous value after click \"Update samples/selections table\" button.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2889593,
     "pr": "N/A"
   },
   {
-    "date": "1/17/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle show/hide widget FC, AFB, and FS ",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/385676"
-  },
-  {
-    "date": "2/20/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI Widget 66439955",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/398686"
-  },
-  {
-    "date": "2/14/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "F_02 - Analyze Requirement",
-    "workItemType": "Dev - Development",
+    "date": "4/6/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2882382: [TOD] The dataset Not In Use is still displayed on SST widget after re dummy and re-select dataset",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2885252,
     "pr": "N/A"
   },
   {
-    "date": "2/28/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement populate data for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/404520"
+    "date": "4/7/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2900292: When user select 'Yes' for TQ. Do you need to further filter the data?, the data is wrong in the parameter log when apply condition of \"Select the population subject to sampling?\"",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2902121,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/420453"
   },
   {
-    "date": "3/31/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2826784: The data is not changed when changing Dataset",
-    "workItemType": "Dev - Bug fix",
+    "date": "4/10/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2900292: When user select 'Yes' for TQ. Do you need to further filter the data?, the data is wrong in the parameter log when apply condition of \"Select the population subject to sampling?\"",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2902121,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/420453"
+  },
+  {
+    "date": "4/11/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2906385,
     "pr": "N/A"
   },
   {
-    "date": "2/14/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "FE - Implement UI widget 68553886",
-    "workItemType": "Dev - Development",
+    "date": "4/12/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2906385,
     "pr": "N/A"
   },
   {
-    "date": "1/5/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2609468: [GA] Lack of back button on common tool right side when view the common tool filtered list view",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/381521"
-  },
-  {
-    "date": "2/9/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle Save Summary Value",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/394716"
-  },
-  {
-    "date": "3/10/2023",
-    "channelName": "",
-    "podlead": "Hung Bui (SM)",
-    "quarter": "Q1",
-    "ticket": "Implement Track changes for Population subject to sampling widgets",
-    "workItemType": "Dev - Development",
+    "date": "4/13/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2906385,
     "pr": "N/A"
   },
   {
-    "date": "1/31/2023",
-    "channelName": "",
-    "podlead": "Quan Dinh (SM)",
-    "quarter": "Q1",
-    "ticket": "Handle The format of values should be based on the users' locale settings.",
-    "workItemType": "Dev - Development",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/390301"
+    "date": "4/14/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2932515: The widget \"select data\" and \"Update samples/selections table\" is NOT displayed after Click 'Update samples/selections table' button incase NOT change any value.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2932526,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/423294"
   },
   {
-    "date": "3/22/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2848534: Missing a warning guidance when changing dataset.",
-    "workItemType": "Dev - Bug fix",
+    "date": "4/17/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2933314: The \"Number of records\" and \"Net amount\" displayed in RED color at the first time generate Parameter Log.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2935943,
     "pr": "N/A"
   },
   {
-    "date": "1/9/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2604152: [2D - SAP] [By Other] - Inconsistently enable/disable 'UST' button when Delete or enter '00' in cell have existing data",
-    "workItemType": "Dev - Bug fix",
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/383624"
+    "date": "4/18/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2933314: The \"Number of records\" and \"Net amount\" displayed in RED color at the first time generate Parameter Log.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2935943,
+    "pr": "N/A"
   },
   {
-    "date": "3/23/2023",
-    "channelName": "",
-    "podlead": "Thuong Truong Cong (SM)",
-    "quarter": "Q1",
-    "ticket": "Fix Bug 2854253: User doesn't get notified of changes when changing a dataset without relevant amount column",
-    "workItemType": "Dev - Bug fix",
+    "date": "4/19/2023",
+    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2940422: [TOD][SE/GA] The number record is displayed as N/A when user select the Attribute (Non-monetary) in Determine the sample type widget",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 2949001,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "4/20/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Document analysis",
+    "workItemType": "DEV Task",
+    "workItemId": 2949488,
+    "pr": "N/A"
+  },
+  {
+    "date": "4/21/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Document analysis",
+    "workItemType": "DEV Task",
+    "workItemId": 2949488,
+    "pr": "N/A"
+  },
+  {
+    "date": "4/24/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Investigate solution to call Generate sample in local",
+    "workItemType": "DEV Task",
+    "workItemId": 2968297,
+    "pr": "N/A"
+  },
+  {
+    "date": "4/25/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Investigate solution to call Generate sample in local",
+    "workItemType": "DEV Task",
+    "workItemId": 2968297,
+    "pr": "N/A"
+  },
+  {
+    "date": "4/27/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Implement logic Initial top up generation (Top up sampling)",
+    "workItemType": "DEV Task",
+    "workItemId": 2976279,
+    "pr": "N/A"
+  },
+  {
+    "date": "4/28/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Implement show popup when criteria's met",
+    "workItemType": "DEV Task",
+    "workItemId": 2976275,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/4/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Implement logic Initial top up generation (Top up sampling)",
+    "workItemType": "DEV Task",
+    "workItemId": 2976279,
+    "pr": "N/A"
+  },
+  {
+    "date": "5/5/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Implement logic Initial top up generation (Top up sampling)",
+    "workItemType": "DEV Task",
+    "workItemId": 2976279,
+    "pr": "N/A"
+  },
+  {
+    "date": "5/10/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic to received new topup value",
+    "workItemType": "DEV Task",
+    "workItemId": 3007067,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/11/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic to received new topup value",
+    "workItemType": "DEV Task",
+    "workItemId": 3007067,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/12/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic to received new topup value after subsequence topup",
+    "workItemType": "DEV Task",
+    "workItemId": 3014355,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/15/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic to received new topup value after subsequence topup",
+    "workItemType": "DEV Task",
+    "workItemId": 3014355,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/16/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Implement the warning behavior to track changes and the guidance after Subsequent ",
+    "workItemType": "DEV Task",
+    "workItemId": 3014373,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/17/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Update UT",
+    "workItemType": "DEV Task",
+    "workItemId": 3032414,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/18/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Update UT",
+    "workItemType": "DEV Task",
+    "workItemId": 3032414,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/19/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3039579,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/22/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3039579,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/23/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3039579,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/24/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Handle logic for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3039579,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/25/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Check AC and prepare data demo for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3067551,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/29/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Check AC and prepare data demo for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3067551,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "NaN/NaN/NaN",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Check AC and prepare data demo for MUS",
+    "workItemType": "DEV Task",
+    "workItemId": 3067551,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "5/31/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Hard delete all sample selection result not use",
+    "workItemType": "DEV Task",
+    "workItemId": 3014392,
+    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
+  },
+  {
+    "date": "6/1/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3086634,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/2/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "[Top up] User can not click to Update samples/selections table button again after click button Cancel of subsequent instance Top up modal",
+    "workItemType": "Bug",
+    "workItemId": 3083672,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/5/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "[Top up] User can not click to Update samples/selections table button again after click button Cancel of subsequent instance Top up modal",
+    "workItemType": "Bug",
+    "workItemId": 3083672,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/6/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3099365,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/7/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3099365,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/8/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3099365,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/9/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3099365,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/12/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3099365,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/13/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3115206,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/14/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3115206,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/15/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3115206,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/16/2023",
+    "channelName": "OFF PM /// 3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3115206,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/19/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3115206,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/20/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3137825: [Top up] Number/Value of items above performance materiality and Value of remaining population are displayed incorrect after topup",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3137850,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/21/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3142794,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/22/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3142794,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/23/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3142794,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/26/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3142794,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/27/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3142794,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/28/2023",
+    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/29/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "6/30/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q2",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
     "pr": "N/A"
   }
 ]

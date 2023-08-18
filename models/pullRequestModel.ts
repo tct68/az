@@ -3,6 +3,7 @@ interface WorkItem {
     wiTitle: string;
     wiUrl: string;
     podLead: string;
+    channelName: string;
     fields?: {
         [key: string]: any;
     };
@@ -19,4 +20,5 @@ interface TimeLogWorkItem {
     workitem: WorkItem;
     date: string;
     type: string;
+    quarter: string;
 }

@@ -40,9 +40,13 @@ const dotenv_1 = require("dotenv");
 const fs_1 = require("fs");
 const lodash_1 = __importDefault(require("lodash"));
 const xlsx_1 = __importDefault(require("xlsx"));
+const json_as_xlsx_1 = __importDefault(require("json-as-xlsx"));
+const moment_1 = __importDefault(require("moment"));
+const path_1 = require("path");
+const perf_hooks_1 = require("perf_hooks");
 (0, dotenv_1.config)();
 class Az {
-    constructor() {
+    constructor(empCode, leader) {
         this.authHandler = azdev.getPersonalAccessTokenHandler(`${process.env.AZURE_PERSONAL_ACCESS_TOKEN}`);
         this.connection = new azdev.WebApi(`${process.env.ORG_URL}`, this.authHandler);
         this.DATA_PATH = "data";
@@ -50,6 +54,7 @@ class Az {
         this.OUTPUT_PATH = "output";
         this.TIME_LOG_PATH = `${this.INPUT_PATH}/timelog.csv`;
         this.OUTPUT_FILE_PATH = `${this.OUTPUT_PATH}/output.xlsx`;
+        this.TASK_FILE_PATH = `${this.INPUT_PATH}/task.xlsx`;
         this.convertExeclDate = (excelSerialDate) => {
             const unixTimestamp = (excelSerialDate - 25569) * 86400;
             const dateObj = new Date(unixTimestamp * 1000);
@@ -77,9 +82,11 @@ class Az {
                             wiUrl: `https://symphonyvsts.visualstudio.com/VSA/_workitems/edit/${wi.id}`,
                             podLead: wi.fields['System.CreatedBy'].displayName,
                             fields: wi.fields,
+                            channelName: ''
                         },
                         date: this.convertExeclDate(wiInfo.date),
-                        type: wiInfo.type
+                        type: wiInfo.type,
+                        quarter: this.convertExeclDate(wiInfo.date)
                     });
                 }
             }
@@ -98,7 +105,8 @@ class Az {
                     wiTitle: wi.fields['System.Title'],
                     wiUrl: `https://symphonyvsts.visualstudio.com/VSA/_workitems/edit/${wi.id}`,
                     podLead: wi.fields['System.CreatedBy'].displayName,
-                    fields: wi.fields
+                    fields: wi.fields,
+                    channelName: ''
                 };
             }
             return null;
@@ -117,14 +125,17 @@ class Az {
         this.getWorkItemPullRequest = (workItemId, pullRequests) => {
             return pullRequests.find(x => x.workItems.some((w) => w.id == workItemId));
         };
-        this.getWorkItemTracking = () => __awaiter(this, void 0, void 0, function* () {
+        this.getWorkItemTracking = (workItems) => __awaiter(this, void 0, void 0, function* () {
             var _c, _d, _e, _f, _g;
             const gitApi = yield this.connection.getGitApi();
-            const workItemTimeLog = yield this.getWorkItemsFromTimelog();
-            const pullRequests = yield gitApi.getPullRequests("VSA.Application", {
-                creatorId: process.env.USER_ID,
-                status: 3
-            }, "VSA");
+            let workItemTimeLog;
+            if (!workItems || workItems.length == 0) {
+                workItemTimeLog = yield this.getWorkItemsFromTimelog();
+            }
+            else {
+                workItemTimeLog = workItems;
+            }
+            const pullRequests = yield this.getUserPullRequest(gitApi);
             console.log(`Có ${pullRequests.length} pull request`);
             const pullRequestWorkItems = [];
             for (let index = 0; index < pullRequests.length; index++) {
@@ -132,7 +143,7 @@ class Az {
                 const pullRequestWorkItemRefs = yield gitApi.getPullRequestWorkItemRefs("VSA.Application", (_c = pr.pullRequestId) !== null && _c !== void 0 ? _c : 0, "VSA");
                 const pullRequestWorkItemIds = pullRequestWorkItemRefs.map(x => x.id);
                 const workItems = yield this.getWorkItemsInfo(pullRequestWorkItemIds);
-                console.log(`Get thông tin pulll request ${pr.title}`);
+                console.log(`Get thông tin pull request ${pr.title}`);
                 pullRequestWorkItems.push({
                     title: (_d = pr.title) !== null && _d !== void 0 ? _d : "",
                     pullRequestId: (_e = pr.pullRequestId) !== null && _e !== void 0 ? _e : 0,
@@ -145,15 +156,16 @@ class Az {
                 const pr = this.getWorkItemPullRequest(w.workitem.id, pullRequestWorkItems);
                 taskSummaries.push({
                     date: w.date,
-                    channelName: "",
+                    channelName: w.workitem.channelName,
                     podlead: (_g = (_f = w.workitem) === null || _f === void 0 ? void 0 : _f.podLead) !== null && _g !== void 0 ? _g : "",
-                    quarter: this.getQuarterFromDate(w.date),
+                    quarter: w.quarter,
                     ticket: w.workitem.wiTitle,
                     workItemType: w.type,
+                    workItemId: w.workitem.id,
                     pr: !!pr ? pr.pullRequestUrl : "N/A"
                 });
             }
-            this.writeData('finalData.json', JSON.stringify(this.sort(JSON.stringify(taskSummaries)), null, 2));
+            this.writeData('finalData.json', this.sort(JSON.stringify(taskSummaries)));
         });
         this.sort = (taskSummaries) => {
             let json = JSON.parse(taskSummaries);
@@ -165,11 +177,59 @@ class Az {
                 delete x.fullDate;
                 return Object.assign({}, x);
             });
-            return json;
+            return JSON.stringify(json, null, 2);
         };
+        this.parse = () => {
+            const path = `${this.DATA_PATH}/finalData.json`;
+            let jsData = (0, fs_1.readFileSync)(path).toString();
+            jsData = JSON.parse(jsData);
+            jsData = JSON.parse(jsData);
+            (0, fs_1.writeFileSync)(path, JSON.stringify(jsData, null, 2));
+        };
+        this.exportXls = () => {
+            const path = `${this.DATA_PATH}/finalData.json`;
+            let jsData = (0, fs_1.readFileSync)(path).toString();
+            const json = JSON.parse(jsData);
+            let data = [
+                {
+                    sheet: 'Summary',
+                    columns: [
+                        { label: 'Date', value: 'date' },
+                        { label: 'Work Item Type', value: 'workItemType' },
+                        { label: 'Podlead', value: 'podlead' },
+                        { label: 'Ticket', value: 'ticket' },
+                        { label: 'Pr', value: 'pr' },
+                        { label: 'workItemId', value: 'workItemId' },
+                        { label: 'quarter', value: 'quarter' },
+                        { label: 'Channel Name', value: 'channelName' }
+                    ],
+                    content: json
+                }
+            ];
+            let settings = {
+                fileName: "MySpreadsheet",
+                extraLength: 3,
+                writeMode: "writeFile",
+                writeOptions: {
+                    type: "file"
+                },
+            };
+            (0, json_as_xlsx_1.default)(data, settings);
+        };
+        this.removePrs = () => __awaiter(this, void 0, void 0, function* () {
+            const gitApi = yield this.connection.getTfvcApi();
+            let branches = yield gitApi.getBranches("VSA");
+            let myBranches = branches.map(x => {
+                return Object.assign({}, x);
+            });
+            (0, fs_1.writeFileSync)(`${this.DATA_PATH}/branches.json`, JSON.stringify(myBranches, null, 2));
+        });
         if (!(0, fs_1.existsSync)(this.DATA_PATH)) {
             (0, fs_1.mkdirSync)(this.DATA_PATH);
         }
+        this.tasks = xlsx_1.default.readFile(this.TASK_FILE_PATH);
+        this.empCode = empCode;
+        this.leader = leader;
     }
     getQuarterFromDate(dateStr) {
         const date = new Date(dateStr);
@@ -177,6 +237,159 @@ class Az {
         const quarter = Math.floor(month / 3) + 1;
         return `Q${quarter}`;
     }
+    getQuarterDates(quarter) {
+        const year = new Date().getFullYear();
+        const quarterStartMonth = 3 * quarter - 2;
+        const startDate = new Date(year, quarterStartMonth - 1, 1);
+        const endDate = new Date(year, quarterStartMonth + 2, 0);
+        const dates = [];
+        let currentDate = startDate;
+        while (currentDate <= endDate) {
+            dates.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+        return dates;
+    }
+    getWorkItemIdFromTicketUrl(url) {
+        const urlArr = url.split('/');
+        const urlArrLength = urlArr.length;
+        let lastItem = urlArr[urlArrLength - 1];
+        if (!lastItem) {
+            lastItem = urlArr[urlArrLength - 1 - 1];
+        }
+        return Number(`${lastItem}`);
+    }
+    getSheetName(x) {
+        const sheetNameArr = x.split(' ');
+        let date = sheetNameArr[1];
+        if (date.length === 1) {
+            date = `0${date}`;
+        }
+        return [sheetNameArr[0], date].join(' ');
+    }
+    getWorkItemFromDailyTask() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const workItemJson = this.readFileJson('workItems.json');
+            let workItems = [];
+            if (workItemJson) {
+                workItems = workItemJson;
+            }
+            else {
+                const quarter2Dates = this.getQuarterDates(2);
+                const allSheets = [];
+                quarter2Dates.forEach(date => {
+                    const shortDate = (0, moment_1.default)(date).format('ll');
+                    const dateArr = shortDate.split(',');
+                    const mday = dateArr[0];
+                    let sheetName = this.getSheetName(mday);
+                    const data = xlsx_1.default.utils.sheet_to_json(this.tasks.Sheets[sheetName]);
+                    if (data.length > 0) {
+                        allSheets.push(sheetName);
+                    }
+                });
+                const empData = [];
+                allSheets.forEach((x, i) => {
+                    const data = xlsx_1.default.utils.sheet_to_json(this.tasks.Sheets[x]);
+                    const emp = data.find((x) => x['Emp Code'] === this.empCode);
+                    if (emp) {
+                        const ticket = emp['Ticket URL'];
+                        if (ticket && ticket.indexOf('OFF') === -1) {
+                            empData.push({
+                                channelName: emp['OFF AM/PM /// Teams Channel Name'],
+                                date: this.convertExeclDate(emp['Date Created']),
+                                podlead: this.leader,
+                                quarter: 'Q2',
+                                ticket: ticket,
+                                workItemId: this.getWorkItemIdFromTicketUrl(ticket),
+                                workItemType: '',
+                            });
+                        }
+                    }
+                    else {
+                        console.log(x);
+                    }
+                });
+                for (let index = 0; index < empData.length; index++) {
+                    const element = empData[index];
+                    const wi = yield this.getWorkItemInfo(element.workItemId);
+                    if (wi) {
+                        console.log(wi.wiTitle);
+                        workItems.push({
+                            workitem: {
+                                id: element.workItemId,
+                                podLead: element.podlead,
+                                wiTitle: wi.wiTitle,
+                                wiUrl: element.ticket,
+                                fields: wi.fields,
+                                channelName: element.channelName,
+                            },
+                            quarter: element.quarter,
+                            date: element.date,
+                            type: wi.fields ? wi.fields['System.WorkItemType'] : ''
+                        });
+                    }
+                    else {
+                        console.log(element.workItemId);
+                        console.log(element.date);
+                    }
+                }
+                this.writeData('empData.json', empData);
+                this.writeData('workItems.json', workItems);
+                this.writeData('allSheets.json', allSheets);
+            }
+            yield this.getWorkItemTracking(workItems);
+        });
+    }
+    readFileJson(fileName) {
+        const filePath = (0, path_1.join)(__dirname, '../', this.DATA_PATH, fileName);
+        if (!(0, fs_1.existsSync)(filePath)) {
+            return null;
+        }
+        const str = (0, fs_1.readFileSync)(filePath).toString();
+        try {
+            const data = JSON.parse(str);
+            return data;
+        }
+        catch (error) {
+            return null;
+        }
+    }
+    remapPullRequest() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const data = this.readFileJson('finalData.json');
+            const missingPrTask = lodash_1.default.filter(data, (x) => x.pr === 'N/A');
+            for (let index = 0; index < missingPrTask.length; index++) {
+                const element = missingPrTask[index];
+                this.getWorkItemPullRequest;
+            }
+        });
+    }
+    getUserPullRequest(gitApi = null) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const t0 = perf_hooks_1.performance.now();
+            if (!gitApi) {
+                gitApi = yield this.connection.getGitApi();
+            }
+            let pullRequests = this.readFileJson('pullRequests.json');
+            if (lodash_1.default.isEmpty(pullRequests)) {
+                pullRequests = yield gitApi.getPullRequests("VSA.Application", {
+                    creatorId: process.env.USER_ID,
+                    status: 3
+                }, "VSA");
+                this.writeData('pullRequests.json', pullRequests);
+            }
+            const t1 = perf_hooks_1.performance.now();
+            console.log(`Call to getUserPullRequest took ${t1 - t0} milliseconds.`);
+            return pullRequests;
+        });
+    }
+    test() {
+        return __awaiter(this, void 0, void 0, function* () {
+            var api = yield this.connection.getCoreApi();
+            var Teams = yield api.getTeamMembersWithExtendedProperties('VSA.Application', "");
+            console.log(Teams);
+        });
+    }
 }
-const az = new Az();
-az.getWorkItemTracking();
+const az = new Az(411, 'Duy Ba Nguyen');
+az.test(); //.catch(x => console.log(x.message));
