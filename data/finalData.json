@@ -1,582 +1,602 @@
 [
   {
-    "date": "4/3/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2844773: The calculation is wrong in the parameter log.",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2861795,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/418088"
-  },
-  {
-    "date": "4/4/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2882382: [TOD] The dataset Not In Use is still displayed on SST widget after re dummy and re-select dataset",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2885252,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/5/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2889078: The name of selected RAC in \"Relevant amount column\" is auto revert to previous value after click \"Update samples/selections table\" button.",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2889593,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/6/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2882382: [TOD] The dataset Not In Use is still displayed on SST widget after re dummy and re-select dataset",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2885252,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/7/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2900292: When user select 'Yes' for TQ. Do you need to further filter the data?, the data is wrong in the parameter log when apply condition of \"Select the population subject to sampling?\"",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2902121,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/420453"
-  },
-  {
-    "date": "4/10/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2900292: When user select 'Yes' for TQ. Do you need to further filter the data?, the data is wrong in the parameter log when apply condition of \"Select the population subject to sampling?\"",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2902121,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/420453"
-  },
-  {
-    "date": "4/11/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2906385,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/12/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2906385,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/13/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2906342: Should be truncated and appended with \"...\" if the character limit exceeds",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2906385,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/14/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2932515: The widget \"select data\" and \"Update samples/selections table\" is NOT displayed after Click 'Update samples/selections table' button incase NOT change any value.",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2932526,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/423294"
-  },
-  {
-    "date": "4/17/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2933314: The \"Number of records\" and \"Net amount\" displayed in RED color at the first time generate Parameter Log.",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2935943,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/18/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2933314: The \"Number of records\" and \"Net amount\" displayed in RED color at the first time generate Parameter Log.",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2935943,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/19/2023",
-    "channelName": "3.0 Sample Selection SM sampling log (2253453)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2940422: [TOD][SE/GA] The number record is displayed as N/A when user select the Attribute (Non-monetary) in Determine the sample type widget",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 2949001,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "4/20/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Document analysis",
-    "workItemType": "DEV Task",
-    "workItemId": 2949488,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/21/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Document analysis",
-    "workItemType": "DEV Task",
-    "workItemId": 2949488,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/24/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Investigate solution to call Generate sample in local",
-    "workItemType": "DEV Task",
-    "workItemId": 2968297,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/25/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Investigate solution to call Generate sample in local",
-    "workItemType": "DEV Task",
-    "workItemId": 2968297,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/27/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Implement logic Initial top up generation (Top up sampling)",
-    "workItemType": "DEV Task",
-    "workItemId": 2976279,
-    "pr": "N/A"
-  },
-  {
-    "date": "4/28/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Implement show popup when criteria's met",
-    "workItemType": "DEV Task",
-    "workItemId": 2976275,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/4/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Implement logic Initial top up generation (Top up sampling)",
-    "workItemType": "DEV Task",
-    "workItemId": 2976279,
-    "pr": "N/A"
-  },
-  {
-    "date": "5/5/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Implement logic Initial top up generation (Top up sampling)",
-    "workItemType": "DEV Task",
-    "workItemId": 2976279,
-    "pr": "N/A"
-  },
-  {
-    "date": "5/10/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic to received new topup value",
-    "workItemType": "DEV Task",
-    "workItemId": 3007067,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/11/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic to received new topup value",
-    "workItemType": "DEV Task",
-    "workItemId": 3007067,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/12/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic to received new topup value after subsequence topup",
-    "workItemType": "DEV Task",
-    "workItemId": 3014355,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/15/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic to received new topup value after subsequence topup",
-    "workItemType": "DEV Task",
-    "workItemId": 3014355,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/16/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Implement the warning behavior to track changes and the guidance after Subsequent ",
-    "workItemType": "DEV Task",
-    "workItemId": 3014373,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/17/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Update UT",
-    "workItemType": "DEV Task",
-    "workItemId": 3032414,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/18/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Update UT",
-    "workItemType": "DEV Task",
-    "workItemId": 3032414,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/19/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3039579,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/22/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3039579,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/23/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3039579,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/24/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Handle logic for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3039579,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/25/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Check AC and prepare data demo for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3067551,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/29/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Check AC and prepare data demo for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3067551,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "NaN/NaN/NaN",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Check AC and prepare data demo for MUS",
-    "workItemType": "DEV Task",
-    "workItemId": 3067551,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "5/31/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Hard delete all sample selection result not use",
-    "workItemType": "DEV Task",
-    "workItemId": 3014392,
-    "pr": "https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/449897"
-  },
-  {
-    "date": "6/1/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3086634,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/2/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "[Top up] User can not click to Update samples/selections table button again after click button Cancel of subsequent instance Top up modal",
-    "workItemType": "Bug",
-    "workItemId": 3083672,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/5/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "[Top up] User can not click to Update samples/selections table button again after click button Cancel of subsequent instance Top up modal",
-    "workItemType": "Bug",
-    "workItemId": 3083672,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/6/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3099365,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/7/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3099365,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/8/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3099365,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/9/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3099365,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/12/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3097754: [Top up] Update Sample/selection table always failed when user click button Top up incase Determine the sample method = Random",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3099365,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/13/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3115206,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/14/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3115206,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/15/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3115206,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/16/2023",
-    "channelName": "OFF PM /// 3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3115206,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/19/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3102745: [Top up] The subsequent instance Top up modal isn't displayed when user want to top up  again",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3115206,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/20/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3137825: [Top up] Number/Value of items above performance materiality and Value of remaining population are displayed incorrect after topup",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3137850,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/21/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3142794,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/22/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3142794,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/23/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3142794,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/26/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3142794,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/27/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 3083488: [Top up] User do not return to \"Testing Approach\" subsection after clicking \"Cancel\" button at Warning modal",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3142794,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/28/2023",
-    "channelName": "3.0 Sample Selection TopUP Retain Regen (2251534)",
-    "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
-    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
-    "workItemType": "Dev Task_Defect",
-    "workItemId": 3167683,
-    "pr": "N/A"
-  },
-  {
-    "date": "6/29/2023",
+    "date": "7/3/2023",
     "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
     "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
+    "quarter": "Q3",
     "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
     "workItemType": "Dev Task_Defect",
     "workItemId": 3167683,
     "pr": "N/A"
   },
   {
-    "date": "6/30/2023",
+    "date": "7/4/2023",
     "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
     "podlead": "Duy Ba Nguyen",
-    "quarter": "Q2",
+    "quarter": "Q3",
     "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
     "workItemType": "Dev Task_Defect",
     "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/5/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/6/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/7/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/10/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 2805943: [GA - SE ][Select the Data][Select dataset][Standard/Custom datasets ]: Datasets displayed incorrect in table datasets after reloading DTWP",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3167683,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/11/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3137825: [Top up] Number/Value of items above performance materiality and Value of remaining population are displayed incorrect after topup",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3200912,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/12/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3137825: [Top up] Number/Value of items above performance materiality and Value of remaining population are displayed incorrect after topup",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3200912,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/13/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3214938,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/14/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3214938,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/17/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3214938,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/18/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3214938,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/19/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3214938,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/20/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Analisys requirement and setup engagement",
+    "workItemType": "DEV Task",
+    "workItemId": 3132688,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/21/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Analisys requirement and setup engagement",
+    "workItemType": "DEV Task",
+    "workItemId": 3132688,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/24/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Analisys requirement and setup engagement",
+    "workItemType": "DEV Task",
+    "workItemId": 3132688,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/25/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/26/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/27/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/28/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "7/31/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/1/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67960997",
+    "workItemType": "DEV Task",
+    "workItemId": 3247505,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/2/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3212753: [Top up] The row display in the Samples/selections display incorrect when change Do we need to adjust the sample size? from No to Yes in case Top up",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3272018,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/3/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3281802: [Top up] The row of SST are displayed incorrect when SIAPM = Yes and adjust the sample size by change Risk from lower to higher or replying control to not replying",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3283338,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/4/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3281802: [Top up] The row of SST are displayed incorrect when SIAPM = Yes and adjust the sample size by change Risk from lower to higher or replying control to not replying",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3283338,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/7/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3281802: [Top up] The row of SST are displayed incorrect when SIAPM = Yes and adjust the sample size by change Risk from lower to higher or replying control to not replying",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3283338,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/8/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3231297: [SE/GA] Performance issue: Take much time to open perform tab after generated a lot of records from SST to perform table ",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3299769,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/9/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3303340: [Dataset][Switching][DTWP][Group level] Data filter after switching dataset is not correct display  ",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3305014,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/10/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3308231: [Dataset][Switching][DTWP] View error 500 after switching dataset then save wp ",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3307215,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/11/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Bug 3308231: [Dataset][Switching][DTWP] View error 500 after switching dataset then save wp ",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3307215,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/15/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Handle copy gct for widget 67856589",
+    "workItemType": "DEV Task",
+    "workItemId": 3299022,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/16/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3304552: [Dataset][Switching][DTWP] Data filter is lost after switching dataset then re-input data filter",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3323724,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/17/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3307709: [Dataset][Switching] User is not able to select the Information used in the audit he selected before switching dataset and not save",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3318517,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/18/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Review and fix comment ",
+    "workItemType": "DEV Task",
+    "workItemId": 3330624,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/21/2023",
+    "channelName": "3.0 CopyCU Sample Selection CT (2860807 2860809)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Review and fix comment ",
+    "workItemType": "DEV Task",
+    "workItemId": 3330624,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/22/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3327834: [GA/SE][DTWP][Testing approach] Non-representative selection widget is not triggered after saving working paper",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3339383,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/23/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Prepare PR and fix comment from reviewer",
+    "workItemType": "DEV Task",
+    "workItemId": 3348511,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/24/2023",
+    "channelName": "3.0 Sample Selection SM Switching DS (2379146)",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Prepare PR and fix comment from reviewer",
+    "workItemType": "DEV Task",
+    "workItemId": 3348511,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/25/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3300728: [Dataset][Switching][AR.P02b] The dynamic columns are blank after switching dataset and re-active Perform tab without generate new SST",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3357808,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/28/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3330360: Population no longer pulling through to sample calculation",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3358141,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/29/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3209344: [TOD/Recalculation/Confirmation][Misstatement Card][54490703]The \"% of misstatement in the sample\" value update incorrect after save wp. And \"projected misstatement\" not display value",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3364924,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/30/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3365117: CWCU/CWOCU - GCT: Group/Non-group: ALL common tools attached on widget 'PL  - Population subject to sampling - random' (66439955) are NOT copied from the source to target engagement",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3365434,
+    "pr": "N/A"
+  },
+  {
+    "date": "8/31/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3365117: CWCU/CWOCU - GCT: Group/Non-group: ALL common tools attached on widget 'PL  - Population subject to sampling - random' (66439955) are NOT copied from the source to target engagement",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3365434,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/5/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3330360: Population no longer pulling through to sample calculation",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3358141,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/6/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3330360: Population no longer pulling through to sample calculation",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3358141,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/7/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3392374: The \"Misstatement Card\" is incorrect in case amount of RAC has 3 decimal number.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3392404,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/8/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3392374: The \"Misstatement Card\" is incorrect in case amount of RAC has 3 decimal number.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3392404,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/11/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3399922: [SE/GA] Average amount of credits is a positive amount.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3401776,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/12/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3154925: [GA/SE][RAC][FSL] The RAC selected is lost in RAC popup",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3405635,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/13/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3405123: Group/Non- group - CTs in information table (non-widget) does not display the information",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3405908,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/14/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "[TOD]Error message appears when saving the wp",
+    "workItemType": "Bug",
+    "workItemId": 3410254,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/15/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "[TOD]Error message appears when saving the wp",
+    "workItemType": "Bug",
+    "workItemId": 3410254,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/18/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3410346: [SE/GA][TOD][NSM] Error message \"WpSubHeading not found\" when auditor clicks save working paper.",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3424559,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/19/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3425775: CrossWP - NSM - Samples/Selections - GA/SE: [Sample Size Card] - The 'abovePerformanceMaterialityItems' and 'abovePerformanceMaterialityValue' are shown as '0' instead of the correct value",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3426012,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/20/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3425025: [GA][ASV/APSV] Don't show value under \"Describe why...\" when data at RA standalone flows from RA group",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3431387,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/25/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3425025: [GA][ASV/APSV] Don't show value under \"Describe why...\" when data at RA standalone flows from RA group",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3431387,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/26/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3435357: Test 01 - Not flagging all expected results",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3450215,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/27/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3453234: [SE][File check]: File check test still display after update WP to inactive ",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3453585,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/28/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3459325: [GA] [RA][SM]: The check box auto changes from check to uncheck after the user mark in use dataset in DQD",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3460564,
+    "pr": "N/A"
+  },
+  {
+    "date": "9/29/2023",
+    "channelName": "VSA Bugs 3.0 (Levvia) [daily reply progress]",
+    "podlead": "Duy Ba Nguyen",
+    "quarter": "Q3",
+    "ticket": "Fix Bug 3459325: [GA] [RA][SM]: The check box auto changes from check to uncheck after the user mark in use dataset in DQD",
+    "workItemType": "Dev Task_Defect",
+    "workItemId": 3460564,
     "pr": "N/A"
   }
 ]

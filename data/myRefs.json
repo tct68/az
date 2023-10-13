@@ -1,0 +1,248 @@
+[
+  {
+    "name": "3.0_dev29_combine_features_fix_load_answerContent",
+    "oldObjectId": "a4da8a97d22f84abf47f45559f7e52de567940c9",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3324745--fixbugs",
+    "oldObjectId": "5c64bbd0b552426196ebcb56489860d2ec0c3b97",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3330360--fixbugs",
+    "oldObjectId": "6e5a72026e35436fd63ea7ddcc670fdb017dc446",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3330360--fixbugs-on-3.0_d29_combine_features",
+    "oldObjectId": "78d58ff175df775a1e040f604c4d5c0ee3870781",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3330360--fixbugs-on-3.0_dev29",
+    "oldObjectId": "3d6350ae1de1e1b93e05c9892628e107dda33011",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3330360--fixbugs-on-3.0_dev29_combine_features",
+    "oldObjectId": "38e8b9b3c9dce6921cf9d4c96d697be3f32e8fb7",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3392374--fixbug",
+    "oldObjectId": "3684d76ac228f3e15ac7cd5c9e54d88d47d2a5df",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3405123-fixbug",
+    "oldObjectId": "bc6e4abd17fd44d0eddca54884ff74df3ef68ce1",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "3410346--fixbug",
+    "oldObjectId": "1d63ee5badaa010dcadce00ced8d86621263ebd6",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "6e0ec3a9-revert-from-3.0_dev29_combine_features",
+    "oldObjectId": "1d0ad2f9a0ba949949599c49cb876c8675aeeccd",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_2.3_Enhance_Coverage_UT_2048727_2_2049232_EngCreationService",
+    "oldObjectId": "1b8eadbe673032457e1ec8138bbeecf4430c2f5b",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_2.3_LOAD_2.3.0.1069",
+    "oldObjectId": "21f8c0316b62a2fa711b6a29a623d3bc2821c0bf",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_2.3_bug_2288386_viton_cherrypick_3.0",
+    "oldObjectId": "cf1ce1a462078926b898246e7556e31eb93b579e",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CR_3147742_3299066",
+    "oldObjectId": "1fe8a674dfc81dfce9bce07d329a9d83d8634b26",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B-fixreview_code_3.0",
+    "oldObjectId": "cede1b0459a62ba16fc8911ae08579b0a7cf6618",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B-resolve_conflic",
+    "oldObjectId": "36184ed52acdc8767f94d6b696694da55a8eb2f7",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B_3303340",
+    "oldObjectId": "8420dec4344727e18476e1df931d055833c4fa4a",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B_fixreview_3.0",
+    "oldObjectId": "735a926cc43d4aeb3ef062fda0f9769b53776c37",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B_resolved_conf;ic",
+    "oldObjectId": "64d258dd08bfa624bda1eabfdd327ab9ad97362c",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B_update_code",
+    "oldObjectId": "fa4c780d5d8a88c04db5fc1dc6ac3599bfac2c04",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_CT_2711018B_update_unit_test",
+    "oldObjectId": "c4b94c0ec4cd39dfe85e645ded434c9e76ab596c",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2251534_add_log-on-VSA_3.0_USG_2251534",
+    "oldObjectId": "cbe59b69887f218047eb7d4922c498818ebea92c",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2251534_fix_ac-on-VSA_3.0_USG_2251534",
+    "oldObjectId": "6a1e1fabb25a7939f866a63f0a8fd969b7b30708",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2253453",
+    "oldObjectId": "ebcec489540e115eced6da851d7a81641b2bc626",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2253453_combine_with_logic_hot_fix-on-VSA_3.0_USG_2253453",
+    "oldObjectId": "e24984828bf120d63dd55c4dd9f5e415abd75adb",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2860807_2860809",
+    "oldObjectId": "86024f17696d1bb4fafef55c9119fdb58f1bbd2f",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2860807_2860809_fix_review_3.0",
+    "oldObjectId": "97e814aacdeeefe048bfcabc6d55467944d123c1",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2860807_2860809_fix_review_code",
+    "oldObjectId": "af5f27c44de0a5a395e6735be7c2994e07c83e05",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USG_2860807_2860809_fixreview",
+    "oldObjectId": "dee97d645e0815a6cebaeef987d59f3194dff664",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "VSA_3.0_USGs_2250982_2253453_fixbug-on-vsa_3.0_combine_deploy_d25",
+    "oldObjectId": "a3cf7127e15ddca87ca58a18ec1ac35e81c1a4ae",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbug--3330360-on-3.0_dev29_combine_features",
+    "oldObjectId": "6fc81b0524724a060c22986fd2cb1e391b7b26f0",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbug--3330360-on-d23_new_branchs_for_combine",
+    "oldObjectId": "3e95732b04d53ee30e0b2752a6f24a988aae14ab",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbug--3330360-on-release-3.0",
+    "oldObjectId": "21b20eb09b417f3010b32b85de6d22f190ac835a",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbug--3330360_base_d29",
+    "oldObjectId": "19a102ae32fce8621dfdf6cee9a22a64e157477a",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbug--3365117",
+    "oldObjectId": "4ebf8c38b9b97188088337b93e831c7ae60f1d41",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "fixbugs-3330360",
+    "oldObjectId": "e94ce5bab53839768a08fd104a4ff6a867bd2b7d",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "release-3.0-3366045_3391941",
+    "oldObjectId": "43a41d227a654bf2f4e83b3f9eec55dea591e06d",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "release-3.0-3392374",
+    "oldObjectId": "a3f210f2a9600c555fde9cbfa640bde6f2a3f238",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "thuongtruong/3213088-on-combine_branchs_d23",
+    "oldObjectId": "5b9051883adacf6cb65fd90e6b7f21798f9cae60",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "thuongtruong/fixbug--3213088-on-combine_branchs_d23",
+    "oldObjectId": "08cc1e2b18366843bb4f0947a7a34746d8fcd3ec",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  },
+  {
+    "name": "vsa_3.0_combine_deploy_d25_cherry_pick",
+    "oldObjectId": "2460b8cab7097c069d3d7294627db2cb2fc2d08f",
+    "newObjectId": "0000000000000000000000000000000000000000",
+    "repositoryId": "VSA.Application"
+  }
+]
