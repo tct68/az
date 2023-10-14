@@ -152,6 +152,7 @@ class Az {
   }
 
   exportXls = () => {
+    console.log(this.exportXls.name)
     let jsData = readFileSync(this.DATA).toString()
     const json = JSON.parse(jsData)
 
@@ -206,6 +207,7 @@ class Az {
   }
 
   getEmpData = () => {
+    console.log(this.getEmpData.name)
     const date = new Date()
     const quarter = Math.floor(date.getMonth() / 3)
     const quarter2Dates = Helpers.getQuarterDates(date, quarter)
@@ -255,6 +257,7 @@ class Az {
   }
 
   async getUserPullRequest() {
+    console.log(this.getUserPullRequest.name)
     const t0 = performance.now()
     var gitApi = await this.connection.getGitApi()
 
@@ -276,6 +279,7 @@ class Az {
   }
 
   getUserWorkItems = async (workItemIds: any[]) => {
+    console.log(this.getUserWorkItems.name)
     const workItemTrackingApi = await this.connection.getWorkItemTrackingApi()
     const uniqWorkitemIds = _.uniq(workItemIds)
     const workItems = await workItemTrackingApi.getWorkItems(uniqWorkitemIds)
@@ -283,6 +287,7 @@ class Az {
   }
 
   getPullRequestWorkItemRefs = async () => {
+    console.log(this.getPullRequestWorkItemRefs.name)
     const gitApi = await this.connection.getGitApi()
     const pullRequests = Helpers.readFileJson("pullRequests.json")
     const pullRequestWorkItemRefs: any[] = []
@@ -311,12 +316,14 @@ class Az {
       await this.getUserPullRequest()
       await this.getUserWorkItems(_.map(tempData, (x) => x.workItemId))
       await this.getPullRequestWorkItemRefs()
+      return true
     }
 
     return true
   }
 
   run = () => {
+    console.log(this.run.name)
     const empData: TaskSummary[] = Helpers.readFileJson("empData.json")
     const pullRequests: GitPullRequest[] = Helpers.readFileJson("pullRequests.json")
     const workItems: WorkItemTrackingInterfaces.WorkItem[] = Helpers.readFileJson("workItems.json")
@@ -356,6 +363,7 @@ class Az {
   }
 
   flatData = () => {
+    console.log(this.flatData.name)
     const finalData = Helpers.readFileJson("finalData.json")
     const data: any[] = []
     _.forEach(finalData, (d) => {
@@ -379,7 +387,7 @@ class Az {
 }
 
 const az = new Az(413, "Duy Ba Nguyen")
-az.init(false)
+az.init(true)
   .catch(console.log)
   .then((x) => {
     if (x) {
