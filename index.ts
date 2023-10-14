@@ -1,28 +1,27 @@
 import * as azdev from "azure-devops-node-api"
+import { GitPullRequest } from "azure-devops-node-api/interfaces/GitInterfaces"
+import WorkItemTrackingInterfaces from "azure-devops-node-api/interfaces/WorkItemTrackingInterfaces"
+import VSSInterfaces from "azure-devops-node-api/interfaces/common/VSSInterfaces"
 import { config } from "dotenv"
-import { writeFileSync, existsSync, mkdirSync, readFileSync } from "fs"
+import { existsSync, mkdirSync, readFileSync } from "fs"
 import _ from "lodash"
 import xlsx from "xlsx"
 import jxlsx, { IJsonSheet, ISettings } from "json-as-xlsx"
 import moment from "moment"
-import { join } from "path"
-import { IGitApi } from "azure-devops-node-api/GitApi"
 import { performance } from "perf_hooks"
+import Helpers from "./helpers"
+import { PullRequest, PullRequestWorkItemRefs, TimeLogWorkItem, WorkItem } from "./models/pullRequestModel"
 config()
 
 class Az {
-  private authHandler = azdev.getPersonalAccessTokenHandler(
-    `${process.env.AZURE_PERSONAL_ACCESS_TOKEN}`
-  )
-  private connection = new azdev.WebApi(
-    `${process.env.ORG_URL}`,
-    this.authHandler
-  )
+  private authHandler = azdev.getPersonalAccessTokenHandler(`${process.env.AZURE_PERSONAL_ACCESS_TOKEN}`)
+  private connection = new azdev.WebApi(`${process.env.ORG_URL}`, this.authHandler)
   private readonly DATA_PATH = "data"
   private readonly INPUT_PATH = "input"
   private readonly OUTPUT_PATH = "output"
   private readonly TIME_LOG_PATH = `${this.INPUT_PATH}/timelog.csv`
   private readonly FINAL_DATA = `${this.DATA_PATH}/finalData.json`
+  private readonly DATA = `${this.DATA_PATH}/data.json`
   private readonly TASK_FILE_PATH = `${this.INPUT_PATH}/task.xlsx`
   private readonly tasks: xlsx.WorkBook
   private readonly empCode: any
@@ -35,18 +34,6 @@ class Az {
     this.tasks = xlsx.readFile(this.TASK_FILE_PATH)
     this.empCode = empCode
     this.leader = leader
-  }
-
-  convertExeclDate = (excelSerialDate: any) => {
-    const unixTimestamp = (excelSerialDate - 25569) * 86400
-    const dateObj = new Date(unixTimestamp * 1000)
-
-    const month = dateObj.getMonth() + 1
-    const day = dateObj.getDate()
-    const year = dateObj.getFullYear()
-
-    const formattedDate = `${month}/${day}/${year}`
-    return formattedDate
   }
 
   getWorkItemsFromTimelog = async (): Promise<TimeLogWorkItem[]> => {
@@ -68,24 +55,13 @@ class Az {
             fields: wi.fields,
             channelName: "",
           },
-          date: this.convertExeclDate(wiInfo.date),
+          date: Helpers.convertExeclDate(wiInfo.date),
           type: wiInfo.type,
-          quarter: this.convertExeclDate(wiInfo.date),
+          quarter: Helpers.convertExeclDate(wiInfo.date),
         })
       }
     }
     return wIds
-  }
-
-  writeData = (path: String, data: any) => {
-    writeFileSync(`data/${path}`, JSON.stringify(data, null, 2))
-  }
-
-  getQuarterFromDate(dateStr: string) {
-    const date = new Date(dateStr)
-    const month = date.getMonth()
-    const quarter = Math.floor(month / 3) + 1
-    return `Q${quarter}`
   }
 
   getWorkItemInfo = async (wiId: number): Promise<WorkItem | null> => {
@@ -94,7 +70,7 @@ class Az {
     const wi = await workItemTracking.getWorkItem(wiId)
     console.log(wi)
     if (wi) {
-      this.writeData(`workItems/${wiId}.json`, wi)
+      Helpers.writeData(`workItems/${wiId}.json`, wi)
       return {
         id: wi.id ?? 0,
         wiTitle: wi.fields!["System.Title"],
@@ -108,9 +84,7 @@ class Az {
     return null
   }
 
-  getWorkItemsInfo = async (
-    workItemIds: (string | undefined)[]
-  ): Promise<WorkItem[]> => {
+  getWorkItemsInfo = async (workItemIds: (string | undefined)[]): Promise<WorkItem[]> => {
     const workItems: WorkItem[] = []
     for (let i = 0; i < workItemIds.length; i++) {
       const wId = workItemIds[i]
@@ -123,13 +97,8 @@ class Az {
     return workItems
   }
 
-  getWorkItemPullRequest = (
-    workItemId: Number,
-    pullRequests: PullRequest[]
-  ) => {
-    return pullRequests.find((x) =>
-      x.workItems.some((w: WorkItem) => w.id == workItemId)
-    )
+  getWorkItemPullRequest = (workItemId: Number, pullRequests: PullRequest[]) => {
+    return pullRequests.find((x) => x.workItems.some((w: WorkItem) => w.id == workItemId))
   }
 
   getWorkItemTracking = async (workItems: TimeLogWorkItem[]) => {
@@ -143,20 +112,16 @@ class Az {
     }
 
     if (!_.isEmpty(workItemTimeLog)) {
-      const pullRequests = await this.getUserPullRequest(gitApi)
+      const pullRequests = Helpers.readFileJson("pullRequests.json")
       console.log(`Có ${pullRequests.length} pull request`)
 
       const pullRequestWorkItems: PullRequest[] = []
       for (let index = 0; index < pullRequests.length; index++) {
         const pr = pullRequests[index]
-        const pullRequestWorkItemRefs = await gitApi.getPullRequestWorkItemRefs(
-          "VSA.Application",
-          pr.pullRequestId ?? 0,
-          "VSA"
-        )
+        console.log(`Get thông tin pull request ${pr.title}`)
+        const pullRequestWorkItemRefs = await gitApi.getPullRequestWorkItemRefs("VSA.Application", pr.pullRequestId ?? 0, "VSA")
         const pullRequestWorkItemIds = pullRequestWorkItemRefs.map((x) => x.id)
         const workItems = await this.getWorkItemsInfo(pullRequestWorkItemIds)
-        console.log(`Get thông tin pull request ${pr.title}`)
 
         pullRequestWorkItems.push({
           title: pr.title ?? "",
@@ -168,10 +133,7 @@ class Az {
 
       const taskSummaries: TaskSummary[] = []
       for (const w of workItemTimeLog) {
-        const pr = this.getWorkItemPullRequest(
-          w.workitem.id,
-          pullRequestWorkItems
-        )
+        const pr = this.getWorkItemPullRequest(w.workitem.id, pullRequestWorkItems)
 
         taskSummaries.push({
           date: w.date,
@@ -185,38 +147,12 @@ class Az {
         })
       }
 
-      this.writeData("finalData.json", this.sort(taskSummaries))
+      Helpers.writeData("finalData.json", Helpers.sort(taskSummaries))
     }
   }
 
-  sort = (taskSummaries: any[]) => {
-    let json = taskSummaries
-    json = _.map(json, (x) => {
-      return {
-        date: x.date,
-        fullDate: new Date(x.date),
-        ...x,
-      }
-    })
-    json = _.sortBy(json, "fullDate")
-    json = _.map(json, (x) => {
-      delete x.fullDate
-      return {
-        ...x,
-      }
-    })
-
-    return JSON.stringify(json, null, 2)
-  }
-
-  parse = () => {
-    let jsData = readFileSync(this.FINAL_DATA).toString()
-    jsData = JSON.parse(jsData)
-    writeFileSync(this.FINAL_DATA, JSON.stringify(jsData, null, 2))
-  }
-
   exportXls = () => {
-    let jsData = readFileSync(this.FINAL_DATA).toString()
+    let jsData = readFileSync(this.DATA).toString()
     const json = JSON.parse(jsData)
 
     let data: IJsonSheet[] = [
@@ -226,7 +162,7 @@ class Az {
           { label: "Date", value: "date" },
           { label: "Work Item Type", value: "workItemType" },
           { label: "Podlead", value: "podlead" },
-          { label: "Ticket", value: "ticket" },
+          { label: "Ticket", value: "title" },
           { label: "Pr", value: "pr" },
           { label: "workItemId", value: "workItemId" },
           { label: "quarter", value: "quarter" },
@@ -246,39 +182,6 @@ class Az {
     }
 
     jxlsx(data, settings)
-  }
-
-  removePrs = async () => {
-    const gitApi = await this.connection.getTfvcApi()
-    let branches = await gitApi.getBranches("VSA")
-
-    let myBranches = branches.map((x) => {
-      return {
-        ...x,
-      }
-    })
-
-    writeFileSync(
-      `${this.DATA_PATH}/branches.json`,
-      JSON.stringify(myBranches, null, 2)
-    )
-  }
-
-  getQuarterDates(date: Date, quarter: number) {
-    const year = date.getFullYear()
-    const quarterStartMonth = 3 * quarter - 2
-    const startDate = new Date(year, quarterStartMonth - 1, 1)
-    const endDate = new Date(year, quarterStartMonth + 2, 0)
-
-    const dates = []
-    let currentDate = startDate
-
-    while (currentDate <= endDate) {
-      dates.push(new Date(currentDate))
-      currentDate.setDate(currentDate.getDate() + 1)
-    }
-
-    return dates
   }
 
   getWorkItemIdFromTicketUrl(url: string) {
@@ -305,7 +208,7 @@ class Az {
   getEmpData = () => {
     const date = new Date()
     const quarter = Math.floor(date.getMonth() / 3)
-    const quarter2Dates = this.getQuarterDates(date, quarter)
+    const quarter2Dates = Helpers.getQuarterDates(date, quarter)
     const allSheets: string[] = []
 
     quarter2Dates.forEach((date) => {
@@ -327,16 +230,13 @@ class Az {
     let empData: TaskSummary[] = []
     allSheets.forEach((x, i) => {
       const data = xlsx.utils.sheet_to_json(this.tasks.Sheets[x])
-      const empes: any = _.filter(
-        data,
-        (x: any) => x["Emp Code"] === this.empCode
-      )
+      const empes: any = _.filter(data, (x: any) => x["Emp Code"] === this.empCode)
       _.forEach(empes, (emp) => {
         const ticket = emp["Ticket URL"]
         if (ticket && ticket.indexOf("OFF") === -1) {
           empData.push({
             channelName: emp["OFF AM/PM /// Teams Channel Name"],
-            date: this.convertExeclDate(emp["Date Created"]),
+            date: Helpers.convertExeclDate(emp["Date Created"]),
             podlead: this.leader,
             quarter: `Q${quarter}`,
             ticket: ticket,
@@ -349,138 +249,142 @@ class Az {
 
     empData = _.orderBy(empData, (x) => new Date(x.date), "asc")
 
-    this.writeData("empData.json", empData)
-    this.writeData("allSheets.json", allSheets)
+    Helpers.writeData("empData.json", empData)
+    Helpers.writeData("allSheets.json", allSheets)
     return empData
   }
 
-  async getWorkItemFromDailyTask() {
-    const workItemJson = this.readFileJson("workItems.json")
-
-    let workItems: TimeLogWorkItem[] = []
-    if (_.size(workItemJson) > 0) {
-      workItems = workItemJson
-    } else {
-      const empData = this.getEmpData()
-      for (let index = 0; index < empData.length; index++) {
-        const element = empData[index]
-        const wi = await this.getWorkItemInfo(element.workItemId)
-        if (wi) {
-          console.log(`Retrieving ${wi.wiTitle}...`)
-
-          workItems.push({
-            workitem: {
-              id: element.workItemId,
-              podLead: element.podlead,
-              wiTitle: wi.wiTitle,
-              wiUrl: element.ticket,
-              fields: wi.fields,
-              channelName: element.channelName,
-            },
-            quarter: element.quarter,
-            date: element.date,
-            type: wi.fields ? wi.fields["System.WorkItemType"] : "",
-          })
-        } else {
-          console.log(element.workItemId)
-          console.log(element.date)
-        }
-      }
-
-      this.writeData("workItems.json", workItems)
-    }
-    await this.getWorkItemTracking(workItems)
-
-    return "Ok!"
-  }
-
-  readFileJson(fileName: string) {
-    const filePath = join(__dirname, "../", this.DATA_PATH, fileName)
-    if (!existsSync(filePath)) {
-      return null
-    }
-
-    const str = readFileSync(filePath).toString()
-    try {
-      const data = JSON.parse(str)
-      return data
-    } catch (error) {
-      return null
-    }
-  }
-
-  async remapPullRequest() {
-    const data: TaskSummary[] = this.readFileJson("finalData.json")
-    const missingPrTask = _.filter(data, (x) => x.pr === "N/A")
-    for (let index = 0; index < missingPrTask.length; index++) {
-      const element = missingPrTask[index]
-      this.getWorkItemPullRequest
-    }
-  }
-
-  async getUserPullRequest(gitApi: IGitApi | undefined | null = null) {
+  async getUserPullRequest() {
     const t0 = performance.now()
-    if (!gitApi) {
-      gitApi = await this.connection.getGitApi()
-    }
+    var gitApi = await this.connection.getGitApi()
 
-    let pullRequests = this.readFileJson("pullRequests.json")
-    if (_.isEmpty(pullRequests)) {
-      pullRequests = await gitApi.getPullRequests(
-        "VSA.Application",
-        {
-          creatorId: process.env.USER_ID,
-          status: 3,
-        },
-        "VSA"
-      )
+    const pullRequests = await gitApi.getPullRequests(
+      "VSA.Application",
+      {
+        creatorId: process.env.USER_ID,
+        status: 3,
+      },
+      "VSA"
+    )
 
-      this.writeData("pullRequests.json", pullRequests)
-    }
+    Helpers.writeData("pullRequests.json", pullRequests)
+
     const t1 = performance.now()
     console.log(`Call to getUserPullRequest took ${t1 - t0} milliseconds.`)
 
     return pullRequests
   }
 
-  async test() {}
-
-  getBugIdFromTicket = (ticket: string) => {
-    const ticketArr = _.split(ticket, " ")
-    const bugIndex = _.indexOf(ticketArr, "Bug")
-    if (bugIndex > -1) {
-      return +`${_.replace(ticketArr[bugIndex + 1], ":", "")}`
-    }
-
-    return 0
+  getUserWorkItems = async (workItemIds: any[]) => {
+    const workItemTrackingApi = await this.connection.getWorkItemTrackingApi()
+    const uniqWorkitemIds = _.uniq(workItemIds)
+    const workItems = await workItemTrackingApi.getWorkItems(uniqWorkitemIds)
+    Helpers.writeData("workItems.json", workItems)
   }
 
-  mappingPullRequest = async () => {
-    const finalData = this.readFileJson("finalData.json")
-    const devTaskDefect = _.filter(
-      finalData,
-      (x) => x.workItemType === "Dev Task_Defect"
-    )
+  getPullRequestWorkItemRefs = async () => {
+    const gitApi = await this.connection.getGitApi()
+    const pullRequests = Helpers.readFileJson("pullRequests.json")
+    const pullRequestWorkItemRefs: any[] = []
+    for (let index = 0; index < pullRequests.length; index++) {
+      const pullrequest = pullRequests[index]
+      console.log(`Get ${pullrequest.title}...`)
 
-    for (let index = 0; index < devTaskDefect.length; index++) {
-      const devTask = devTaskDefect[index]
-      const { ticket } = devTask
-      const bugId = this.getBugIdFromTicket(ticket)
+      const pullRequestWorkItemRef = await gitApi.getPullRequestWorkItemRefs("VSA.Application", pullrequest.pullRequestId, "VSA")
 
-      if (bugId) {
-        const wi = await this.getWorkItemInfo(bugId)
-
-        break
+      if (pullRequestWorkItemRef) {
+        _.forEach(pullRequestWorkItemRef, (x: VSSInterfaces.ResourceRef) => {
+          pullRequestWorkItemRefs.push({
+            workItemId: x.id,
+            pullRequestId: pullrequest.pullRequestId,
+          })
+        })
       }
     }
+
+    Helpers.writeData("pullRequestWorkItemRefs.json", _.groupBy(pullRequestWorkItemRefs, "workItemId"))
+  }
+
+  init = async (first: boolean) => {
+    if (first) {
+      const tempData = this.getEmpData()
+      await this.getUserPullRequest()
+      await this.getUserWorkItems(_.map(tempData, (x) => x.workItemId))
+      await this.getPullRequestWorkItemRefs()
+    }
+
+    return true
+  }
+
+  run = () => {
+    const empData: TaskSummary[] = Helpers.readFileJson("empData.json")
+    const pullRequests: GitPullRequest[] = Helpers.readFileJson("pullRequests.json")
+    const workItems: WorkItemTrackingInterfaces.WorkItem[] = Helpers.readFileJson("workItems.json")
+    const pullRequestWorkItemRefs: any = Helpers.readFileJson("pullRequestWorkItemRefs.json")
+
+    const finalData: any[] = []
+    for (let index = 0; index < empData.length; index++) {
+      const data: any = empData[index]
+      const workItem = _.find(workItems, (x: WorkItemTrackingInterfaces.WorkItem) => x.id === data.workItemId)
+      if (workItem) {
+        data.workItemType = _.get(workItem.fields, "System.WorkItemType")
+        data.title = _.get(workItem.fields, "System.Title")
+
+        const bugId = Helpers.getBugIdFromTicket(data.title)
+        const pullRequestWorkItemRef = pullRequestWorkItemRefs[bugId]
+        if (pullRequestWorkItemRef) {
+          const _prs = _.uniq(_.map(pullRequestWorkItemRef, (x: any) => x.pullRequestId))
+          data.pr = []
+          if (_prs) {
+            _.forEach(_prs, (prId: any) => {
+              const pr = _.find(pullRequests, (p: GitPullRequest) => p.pullRequestId === prId)
+              if (pr) {
+                data.pr.push({
+                  url: `https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/${pr.pullRequestId}`,
+                  title: pr.title,
+                })
+              }
+            })
+          }
+        }
+      }
+
+      finalData.push(data)
+    }
+
+    Helpers.writeData("finalData.json", finalData)
+  }
+
+  flatData = () => {
+    const finalData = Helpers.readFileJson("finalData.json")
+    const data: any[] = []
+    _.forEach(finalData, (d) => {
+      if (_.isEmpty(d.pr)) {
+        data.push({
+          ...d,
+          pr: "N/A",
+        })
+      } else {
+        _.forEach(d.pr, (pr) => {
+          data.push({
+            ...d,
+            pr: pr.url,
+          })
+        })
+      }
+    })
+
+    Helpers.writeData("data.json", data)
   }
 }
 
-const az = new Az(411, "Duy Ba Nguyen")
-// az.getWorkItemFromDailyTask()
-//   .catch((x) => console.log(x.message))
-//   .then((x) => {
-//     az.parse()
-//   })
-
-az.mappingPullRequest().catch(console.log)
+const az = new Az(413, "Duy Ba Nguyen")
+az.init(false)
+  .catch(console.log)
+  .then((x) => {
+    if (x) {
+      az.run()
+      az.flatData()
+      az.exportXls()
+    }
+  })

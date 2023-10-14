@@ -42,8 +42,8 @@ const lodash_1 = __importDefault(require("lodash"));
 const xlsx_1 = __importDefault(require("xlsx"));
 const json_as_xlsx_1 = __importDefault(require("json-as-xlsx"));
 const moment_1 = __importDefault(require("moment"));
-const path_1 = require("path");
 const perf_hooks_1 = require("perf_hooks");
+const helpers_1 = __importDefault(require("./helpers"));
 (0, dotenv_1.config)();
 class Az {
     constructor(empCode, leader) {
@@ -54,16 +54,8 @@ class Az {
         this.OUTPUT_PATH = "output";
         this.TIME_LOG_PATH = `${this.INPUT_PATH}/timelog.csv`;
         this.FINAL_DATA = `${this.DATA_PATH}/finalData.json`;
+        this.DATA = `${this.DATA_PATH}/data.json`;
         this.TASK_FILE_PATH = `${this.INPUT_PATH}/task.xlsx`;
-        this.convertExeclDate = (excelSerialDate) => {
-            const unixTimestamp = (excelSerialDate - 25569) * 86400;
-            const dateObj = new Date(unixTimestamp * 1000);
-            const month = dateObj.getMonth() + 1;
-            const day = dateObj.getDate();
-            const year = dateObj.getFullYear();
-            const formattedDate = `${month}/${day}/${year}`;
-            return formattedDate;
-        };
         this.getWorkItemsFromTimelog = () => __awaiter(this, void 0, void 0, function* () {
             var _a;
             const timelog = xlsx_1.default.readFile(this.TIME_LOG_PATH);
@@ -84,17 +76,14 @@ class Az {
                             fields: wi.fields,
                             channelName: "",
                         },
-                        date: this.convertExeclDate(wiInfo.date),
+                        date: helpers_1.default.convertExeclDate(wiInfo.date),
                         type: wiInfo.type,
-                        quarter: this.convertExeclDate(wiInfo.date),
+                        quarter: helpers_1.default.convertExeclDate(wiInfo.date),
                     });
                 }
             }
             return wIds;
         });
-        this.writeData = (path, data) => {
-            (0, fs_1.writeFileSync)(`data/${path}`, JSON.stringify(data, null, 2));
-        };
         this.getWorkItemInfo = (wiId) => __awaiter(this, void 0, void 0, function* () {
             var _b;
             console.log(wiId);
@@ -102,7 +91,7 @@ class Az {
             const wi = yield workItemTracking.getWorkItem(wiId);
             console.log(wi);
             if (wi) {
-                this.writeData(`workItems/${wiId}.json`, wi);
+                helpers_1.default.writeData(`workItems/${wiId}.json`, wi);
                 return {
                     id: (_b = wi.id) !== null && _b !== void 0 ? _b : 0,
                     wiTitle: wi.fields["System.Title"],
@@ -139,15 +128,15 @@ class Az {
                 workItemTimeLog = workItems;
             }
             if (!lodash_1.default.isEmpty(workItemTimeLog)) {
-                const pullRequests = yield this.getUserPullRequest(gitApi);
+                const pullRequests = helpers_1.default.readFileJson("pullRequests.json");
                 console.log(`Có ${pullRequests.length} pull request`);
                 const pullRequestWorkItems = [];
                 for (let index = 0; index < pullRequests.length; index++) {
                     const pr = pullRequests[index];
+                    console.log(`Get thông tin pull request ${pr.title}`);
                     const pullRequestWorkItemRefs = yield gitApi.getPullRequestWorkItemRefs("VSA.Application", (_c = pr.pullRequestId) !== null && _c !== void 0 ? _c : 0, "VSA");
                     const pullRequestWorkItemIds = pullRequestWorkItemRefs.map((x) => x.id);
                     const workItems = yield this.getWorkItemsInfo(pullRequestWorkItemIds);
-                    console.log(`Get thông tin pull request ${pr.title}`);
                     pullRequestWorkItems.push({
                         title: (_d = pr.title) !== null && _d !== void 0 ? _d : "",
                         pullRequestId: (_e = pr.pullRequestId) !== null && _e !== void 0 ? _e : 0,
@@ -169,28 +158,11 @@ class Az {
                         pr: !!pr ? pr.pullRequestUrl : "N/A",
                     });
                 }
-                this.writeData("finalData.json", this.sort(taskSummaries));
+                helpers_1.default.writeData("finalData.json", helpers_1.default.sort(taskSummaries));
             }
         });
-        this.sort = (taskSummaries) => {
-            let json = taskSummaries;
-            json = lodash_1.default.map(json, (x) => {
-                return Object.assign({ date: x.date, fullDate: new Date(x.date) }, x);
-            });
-            json = lodash_1.default.sortBy(json, "fullDate");
-            json = lodash_1.default.map(json, (x) => {
-                delete x.fullDate;
-                return Object.assign({}, x);
-            });
-            return JSON.stringify(json, null, 2);
-        };
-        this.parse = () => {
-            let jsData = (0, fs_1.readFileSync)(this.FINAL_DATA).toString();
-            jsData = JSON.parse(jsData);
-            (0, fs_1.writeFileSync)(this.FINAL_DATA, JSON.stringify(jsData, null, 2));
-        };
         this.exportXls = () => {
-            let jsData = (0, fs_1.readFileSync)(this.FINAL_DATA).toString();
+            let jsData = (0, fs_1.readFileSync)(this.DATA).toString();
             const json = JSON.parse(jsData);
             let data = [
                 {
@@ -199,7 +171,7 @@ class Az {
                         { label: "Date", value: "date" },
                         { label: "Work Item Type", value: "workItemType" },
                         { label: "Podlead", value: "podlead" },
-                        { label: "Ticket", value: "ticket" },
+                        { label: "Ticket", value: "title" },
                         { label: "Pr", value: "pr" },
                         { label: "workItemId", value: "workItemId" },
                         { label: "quarter", value: "quarter" },
@@ -218,18 +190,10 @@ class Az {
             };
             (0, json_as_xlsx_1.default)(data, settings);
         };
-        this.removePrs = () => __awaiter(this, void 0, void 0, function* () {
-            const gitApi = yield this.connection.getTfvcApi();
-            let branches = yield gitApi.getBranches("VSA");
-            let myBranches = branches.map((x) => {
-                return Object.assign({}, x);
-            });
-            (0, fs_1.writeFileSync)(`${this.DATA_PATH}/branches.json`, JSON.stringify(myBranches, null, 2));
-        });
         this.getEmpData = () => {
             const date = new Date();
             const quarter = Math.floor(date.getMonth() / 3);
-            const quarter2Dates = this.getQuarterDates(date, quarter);
+            const quarter2Dates = helpers_1.default.getQuarterDates(date, quarter);
             const allSheets = [];
             quarter2Dates.forEach((date) => {
                 const shortDate = (0, moment_1.default)(date).format("ll");
@@ -253,7 +217,7 @@ class Az {
                     if (ticket && ticket.indexOf("OFF") === -1) {
                         empData.push({
                             channelName: emp["OFF AM/PM /// Teams Channel Name"],
-                            date: this.convertExeclDate(emp["Date Created"]),
+                            date: helpers_1.default.convertExeclDate(emp["Date Created"]),
                             podlead: this.leader,
                             quarter: `Q${quarter}`,
                             ticket: ticket,
@@ -264,56 +228,99 @@ class Az {
                 });
             });
             empData = lodash_1.default.orderBy(empData, (x) => new Date(x.date), "asc");
-            this.writeData("empData.json", empData);
-            this.writeData("allSheets.json", allSheets);
+            helpers_1.default.writeData("empData.json", empData);
+            helpers_1.default.writeData("allSheets.json", allSheets);
             return empData;
         };
-        this.getBugIdFromTicket = (ticket) => {
-            const ticketArr = lodash_1.default.split(ticket, " ");
-            const bugIndex = lodash_1.default.indexOf(ticketArr, "Bug");
-            if (bugIndex > -1) {
-                return +`${lodash_1.default.replace(ticketArr[bugIndex + 1], ":", "")}`;
-            }
-            return 0;
-        };
-        this.mappingPullRequest = () => __awaiter(this, void 0, void 0, function* () {
-            const finalData = this.readFileJson("finalData.json");
-            const devTaskDefect = lodash_1.default.filter(finalData, (x) => x.workItemType === "Dev Task_Defect");
-            for (let index = 0; index < devTaskDefect.length; index++) {
-                const devTask = devTaskDefect[index];
-                const { ticket } = devTask;
-                const bugId = this.getBugIdFromTicket(ticket);
-                if (bugId) {
-                    const wi = yield this.getWorkItemInfo(bugId);
-                    break;
+        this.getUserWorkItems = (workItemIds) => __awaiter(this, void 0, void 0, function* () {
+            const workItemTrackingApi = yield this.connection.getWorkItemTrackingApi();
+            const uniqWorkitemIds = lodash_1.default.uniq(workItemIds);
+            const workItems = yield workItemTrackingApi.getWorkItems(uniqWorkitemIds);
+            helpers_1.default.writeData("workItems.json", workItems);
+        });
+        this.getPullRequestWorkItemRefs = () => __awaiter(this, void 0, void 0, function* () {
+            const gitApi = yield this.connection.getGitApi();
+            const pullRequests = helpers_1.default.readFileJson("pullRequests.json");
+            const pullRequestWorkItemRefs = [];
+            for (let index = 0; index < pullRequests.length; index++) {
+                const pullrequest = pullRequests[index];
+                console.log(`Get ${pullrequest.title}...`);
+                const pullRequestWorkItemRef = yield gitApi.getPullRequestWorkItemRefs("VSA.Application", pullrequest.pullRequestId, "VSA");
+                if (pullRequestWorkItemRef) {
+                    lodash_1.default.forEach(pullRequestWorkItemRef, (x) => {
+                        pullRequestWorkItemRefs.push({
+                            workItemId: x.id,
+                            pullRequestId: pullrequest.pullRequestId,
+                        });
+                    });
                 }
             }
+            helpers_1.default.writeData("pullRequestWorkItemRefs.json", lodash_1.default.groupBy(pullRequestWorkItemRefs, "workItemId"));
         });
+        this.init = (first) => __awaiter(this, void 0, void 0, function* () {
+            if (first) {
+                const tempData = this.getEmpData();
+                yield this.getUserPullRequest();
+                yield this.getUserWorkItems(lodash_1.default.map(tempData, (x) => x.workItemId));
+                yield this.getPullRequestWorkItemRefs();
+            }
+            return true;
+        });
+        this.run = () => {
+            const empData = helpers_1.default.readFileJson("empData.json");
+            const pullRequests = helpers_1.default.readFileJson("pullRequests.json");
+            const workItems = helpers_1.default.readFileJson("workItems.json");
+            const pullRequestWorkItemRefs = helpers_1.default.readFileJson("pullRequestWorkItemRefs.json");
+            const finalData = [];
+            for (let index = 0; index < empData.length; index++) {
+                const data = empData[index];
+                const workItem = lodash_1.default.find(workItems, (x) => x.id === data.workItemId);
+                if (workItem) {
+                    data.workItemType = lodash_1.default.get(workItem.fields, "System.WorkItemType");
+                    data.title = lodash_1.default.get(workItem.fields, "System.Title");
+                    const bugId = helpers_1.default.getBugIdFromTicket(data.title);
+                    const pullRequestWorkItemRef = pullRequestWorkItemRefs[bugId];
+                    if (pullRequestWorkItemRef) {
+                        const _prs = lodash_1.default.uniq(lodash_1.default.map(pullRequestWorkItemRef, (x) => x.pullRequestId));
+                        data.pr = [];
+                        if (_prs) {
+                            lodash_1.default.forEach(_prs, (prId) => {
+                                const pr = lodash_1.default.find(pullRequests, (p) => p.pullRequestId === prId);
+                                if (pr) {
+                                    data.pr.push({
+                                        url: `https://symphonyvsts.visualstudio.com/VSA/_git/VSA.Application/pullrequest/${pr.pullRequestId}`,
+                                        title: pr.title,
+                                    });
+                                }
+                            });
+                        }
+                    }
+                }
+                finalData.push(data);
+            }
+            helpers_1.default.writeData("finalData.json", finalData);
+        };
+        this.flatData = () => {
+            const finalData = helpers_1.default.readFileJson("finalData.json");
+            const data = [];
+            lodash_1.default.forEach(finalData, (d) => {
+                if (lodash_1.default.isEmpty(d.pr)) {
+                    data.push(Object.assign(Object.assign({}, d), { pr: "N/A" }));
+                }
+                else {
+                    lodash_1.default.forEach(d.pr, (pr) => {
+                        data.push(Object.assign(Object.assign({}, d), { pr: pr.url }));
+                    });
+                }
+            });
+            helpers_1.default.writeData("data.json", data);
+        };
         if (!(0, fs_1.existsSync)(this.DATA_PATH)) {
             (0, fs_1.mkdirSync)(this.DATA_PATH);
         }
         this.tasks = xlsx_1.default.readFile(this.TASK_FILE_PATH);
         this.empCode = empCode;
         this.leader = leader;
-    }
-    getQuarterFromDate(dateStr) {
-        const date = new Date(dateStr);
-        const month = date.getMonth();
-        const quarter = Math.floor(month / 3) + 1;
-        return `Q${quarter}`;
-    }
-    getQuarterDates(date, quarter) {
-        const year = date.getFullYear();
-        const quarterStartMonth = 3 * quarter - 2;
-        const startDate = new Date(year, quarterStartMonth - 1, 1);
-        const endDate = new Date(year, quarterStartMonth + 2, 0);
-        const dates = [];
-        let currentDate = startDate;
-        while (currentDate <= endDate) {
-            dates.push(new Date(currentDate));
-            currentDate.setDate(currentDate.getDate() + 1);
-        }
-        return dates;
     }
     getWorkItemIdFromTicketUrl(url) {
         const urlArr = url.split("/");
@@ -332,96 +339,28 @@ class Az {
         }
         return [sheetNameArr[0], date].join(" ");
     }
-    getWorkItemFromDailyTask() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const workItemJson = this.readFileJson("workItems.json");
-            let workItems = [];
-            if (lodash_1.default.size(workItemJson) > 0) {
-                workItems = workItemJson;
-            }
-            else {
-                const empData = this.getEmpData();
-                for (let index = 0; index < empData.length; index++) {
-                    const element = empData[index];
-                    const wi = yield this.getWorkItemInfo(element.workItemId);
-                    if (wi) {
-                        console.log(`Retrieving ${wi.wiTitle}...`);
-                        workItems.push({
-                            workitem: {
-                                id: element.workItemId,
-                                podLead: element.podlead,
-                                wiTitle: wi.wiTitle,
-                                wiUrl: element.ticket,
-                                fields: wi.fields,
-                                channelName: element.channelName,
-                            },
-                            quarter: element.quarter,
-                            date: element.date,
-                            type: wi.fields ? wi.fields["System.WorkItemType"] : "",
-                        });
-                    }
-                    else {
-                        console.log(element.workItemId);
-                        console.log(element.date);
-                    }
-                }
-                this.writeData("workItems.json", workItems);
-            }
-            yield this.getWorkItemTracking(workItems);
-            return "Ok!";
-        });
-    }
-    readFileJson(fileName) {
-        const filePath = (0, path_1.join)(__dirname, "../", this.DATA_PATH, fileName);
-        if (!(0, fs_1.existsSync)(filePath)) {
-            return null;
-        }
-        const str = (0, fs_1.readFileSync)(filePath).toString();
-        try {
-            const data = JSON.parse(str);
-            return data;
-        }
-        catch (error) {
-            return null;
-        }
-    }
-    remapPullRequest() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const data = this.readFileJson("finalData.json");
-            const missingPrTask = lodash_1.default.filter(data, (x) => x.pr === "N/A");
-            for (let index = 0; index < missingPrTask.length; index++) {
-                const element = missingPrTask[index];
-                this.getWorkItemPullRequest;
-            }
-        });
-    }
-    getUserPullRequest(gitApi = null) {
+    getUserPullRequest() {
         return __awaiter(this, void 0, void 0, function* () {
             const t0 = perf_hooks_1.performance.now();
-            if (!gitApi) {
-                gitApi = yield this.connection.getGitApi();
-            }
-            let pullRequests = this.readFileJson("pullRequests.json");
-            if (lodash_1.default.isEmpty(pullRequests)) {
-                pullRequests = yield gitApi.getPullRequests("VSA.Application", {
-                    creatorId: process.env.USER_ID,
-                    status: 3,
-                }, "VSA");
-                this.writeData("pullRequests.json", pullRequests);
-            }
+            var gitApi = yield this.connection.getGitApi();
+            const pullRequests = yield gitApi.getPullRequests("VSA.Application", {
+                creatorId: process.env.USER_ID,
+                status: 3,
+            }, "VSA");
+            helpers_1.default.writeData("pullRequests.json", pullRequests);
             const t1 = perf_hooks_1.performance.now();
             console.log(`Call to getUserPullRequest took ${t1 - t0} milliseconds.`);
             return pullRequests;
         });
     }
-    test() {
-        return __awaiter(this, void 0, void 0, function* () { });
-    }
 }
 const az = new Az(411, "Duy Ba Nguyen");
-// az.getWorkItemFromDailyTask()
-//   .catch((x) => console.log(x.message))
-//   .then((x) => {
-//     az.parse()
-//   })
-az.mappingPullRequest().catch(console.log);
+az.init(false)
+    .catch(console.log)
+    .then((x) => {
+    if (x) {
+        az.run();
+        az.flatData();
+        az.exportXls();
+    }
+});

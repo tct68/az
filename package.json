@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node build/index"
+    "start": "npx tsc && node build/index",
+    "build": "yarn clean && npx tsc",
+    "clean": "rimraf build"
   },
   "keywords": [],
   "author": "",
